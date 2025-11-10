@@ -1,0 +1,24 @@
+# .nixpacks.toml
+
+[phases.setup.environment]
+# Use a compatible Node version for Vite + React
+NODE_VERSION = "22.12.0"
+
+[phases.setup]
+# Optional: install global tools if needed
+# e.g., pnpm: "npm install -g pnpm"
+
+[phases.build]
+# Run the build command for Vite
+commands = ["npm install", "npm run build"]
+
+[phases.start]
+# Command to start your app in production
+# For Vite, usually the build output is in 'dist'
+commands = ["npx serve -s dist -l $PORT"]
+
+[metadata]
+# Optional: application metadata
+name = "my-vite-react-app"
+description = "Vite + React app deployed with Nixpacks"
+
