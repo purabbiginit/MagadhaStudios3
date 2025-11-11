@@ -4,11 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
+      "dev": "vite",
+    "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "start": "cross-env PORT=${PORT:-3000} serve -s dist -l $PORT"
+    "preview": "vite preview"
+    
 
   },
   "dependencies": {
